@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} home page{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header><div id="head1"><h2>student management system</h2></div></header>
+    {% if session.get("user") %}
+    <nav style="margin: 20px 0px;" class="navbar">
+        <a href="{{ url_for('dashboard')}}" id="navbtn">dashboard</a>
+        <a href="{{ url_for('add')}}" id="navbtn">add student</a>
+        <a href="{{ url_for('logout')}}" id="navbtn">logout</a>
+    </nav>
+    {% endif %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer id="foot1">"Securely Managing Student Data for Future Success"</footer>
+</body>
+</html>

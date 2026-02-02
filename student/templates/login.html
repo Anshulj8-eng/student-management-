@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<h3 id="log" style="margin-top: 40px;">login window</h3>
+<form action="/login" method="post">
+   <div class="d1"> <label class="lab1">username:</label>
+    <input type="text" id="ip1" name="username" placeholder="enter user name" required><br>
+
+    <label class="lab2">password:</label>
+    <input type="password" id="ip2" name="password" placeholder="enter password" required><br>
+    
+
+    <button type="submit" id="btn" style="margin-left: 200px; margin-top: 60px;">login</button>
+    </div>
+</form>
+{% endblock %}

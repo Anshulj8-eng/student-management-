@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Welcome page{% endblock %}
+
+{% block content %}
+<h3 id="dash">Welcome {{ user }}</h3>
+<table border="5" style="width: 500px;height: 100px;">
+    <tr class="tab">
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Marks</th>
+        <th>Subject</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.roll }}</td>
+        <td>{{ s.marks }}</td>
+        <td>{{ s.subjects }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

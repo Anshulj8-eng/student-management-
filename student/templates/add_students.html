@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Add students {% endblock %}
+{% block content %}
+<h2>Add students </h2>
+<div class="add">
+<form action="/add_students" method="post">
+    Name:<input type="text" name="name" id="ip_n" style="margin-left: 20px;"><br>
+    Roll:<input type="number" name="roll" id="ip_r" style="margin-top: 10px;margin-left: 30px;"><br>
+    Marks:<input type="number" name="marks" id="ip_m" style="margin-top: 10px;margin-left: 17px;"><br>
+    Subject:<input type="text" name="subjects" id="ip_s" style="margin-top: 10px;margin-left: 10px;"><br><br>
+    <button type="submit" id="btn2">Add</button>
+</div>
+</form>
+{% endblock %}
